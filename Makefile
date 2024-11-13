@@ -1,4 +1,4 @@
-.PHONY: build up down migrations migrate shell logs clean
+.PHONY: build up down migrations migrate shell logs clean lint
 
 build:
 	docker-compose build
@@ -20,6 +20,9 @@ shell:
 
 logs:
 	docker-compose logs -f
+
+lint:
+	docker-compose exec web flake8 .
 
 clean:
 	docker-compose down -v
