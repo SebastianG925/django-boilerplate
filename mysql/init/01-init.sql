@@ -1,0 +1,3 @@
+CREATE USER IF NOT EXISTS 'seb_user'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON seb.* TO 'seb_user'@'%';
+FLUSH PRIVILEGES;
