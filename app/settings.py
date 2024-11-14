@@ -55,6 +55,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# Enable CORS for all domains
+CORS_ALLOW_ALL_ORIGINS = True
+
 ROOT_URLCONF = 'app.urls'
 
 TEMPLATES = [
