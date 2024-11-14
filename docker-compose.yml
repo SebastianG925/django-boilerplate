@@ -4,14 +4,14 @@ services:
   api:
     build: . # Build from Dockerfile in current directory
     ports:
-      - "2323:2323" # Expose port 2323 to host machine
+      - "8000:8000" # Expose port 800to host machine
     env_file:
       - .env
     depends_on: # Ensure service starts after db
       - db
     volumes:
       - .:/app    # Mount current directory to /app in container
-    command: python manage.py runserver 0.0.0.0:2323
+    command: python manage.py runserver 0.0.0.0:8000
 
   db:
     image: mysql:8.0
